@@ -28,6 +28,30 @@ This platform demonstrates a complete data pipeline:
 | Visualisation | Power BI |
 | Version Control | Git / GitHub |
 
+## Data Source
+
+| Source | Type | Description |
+|--------|------|-------------|
+| [Adzuna API](https://developer.adzuna.com) | REST API | UK job listings — free developer tier |
+
+### API Configuration
+
+1. Copy `.env.example` to `.env`
+2. Add your Adzuna App ID and App Key
+3. Run `python src/test_config.py` to verify
+
+> API credentials are stored locally in `.env` and are never committed to Git.
+
+## ETL Process
+
+| Stage | Status | Description |
+|-------|--------|-------------|
+| Extract | 🚧 In Progress | Fetch job listings from Adzuna API |
+| Transform | ⏳ Planned | Clean and standardise job data |
+| Load | ⏳ Planned | Load into PostgreSQL |
+| Analyse | ⏳ Planned | SQL transformations and skill extraction |
+| Visualise | ⏳ Planned | Power BI dashboard |
+
 ## Project Structure
 market_analytics_proj/ ├── data/ │ ├── raw/ # Raw ingested job listings │ └── processed/ # Cleaned and transformed data ├── src/ # Python ETL scripts ├── sql/ # SQL transformation scripts ├── notebooks/ # Exploratory analysis ├── docs/ # Architecture diagrams and documentation ├── tests/ # Unit tests ├── requirements.txt # Python dependencies └── README.md
 
