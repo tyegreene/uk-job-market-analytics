@@ -5,7 +5,7 @@ UK job market data to surface hiring trends, in-demand skills, and regional insi
 
 ## Project Status
 
-🚧 **In Progress** — Currently setting up project foundation.
+🚧 **In Progress** — Extract pipeline complete. Currently exploring raw data.
 
 ## Overview
 
@@ -46,11 +46,17 @@ This platform demonstrates a complete data pipeline:
 
 | Stage | Status | Description |
 |-------|--------|-------------|
-| Extract | 🚧 In Progress | Fetch job listings from Adzuna API |
+| Extract | ✅ Complete | Fetch job listings from Adzuna API → `data/raw/` |
 | Transform | ⏳ Planned | Clean and standardise job data |
 | Load | ⏳ Planned | Load into PostgreSQL |
 | Analyse | ⏳ Planned | SQL transformations and skill extraction |
 | Visualise | ⏳ Planned | Power BI dashboard |
+
+### Run Extraction
+
+```bash
+source .venv/Scripts/activate   # Git Bash
+python src/extract_jobs.py
 
 ## Project Structure
 market_analytics_proj/ ├── data/ │ ├── raw/ # Raw ingested job listings │ └── processed/ # Cleaned and transformed data ├── src/ # Python ETL scripts ├── sql/ # SQL transformation scripts ├── notebooks/ # Exploratory analysis ├── docs/ # Architecture diagrams and documentation ├── tests/ # Unit tests ├── requirements.txt # Python dependencies └── README.md
